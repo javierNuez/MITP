@@ -1,7 +1,8 @@
 <template>
     <div>
         <h2>Usuario actu88alww</h2>
-        <h1>Id:{{ listaUsuarios}}</h1>
+        <h1>{{ listaUsuarios}}</h1>
+        <button @click="agregar">Agregar Usuario</button>
     </div>
 </template>
 <script>
@@ -16,5 +17,11 @@ export default {
         store, listaUsuarios
         };
     },
+    methods: {
+        agregar(){
+            
+            this.store.agregarUsuario();
+        }
+    }
 };
 </script>
