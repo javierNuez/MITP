@@ -1,6 +1,9 @@
 <template>
     <div>
-        Home ss
+        <div>
+            <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+        
     </div>
 </template>
 
