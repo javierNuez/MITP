@@ -1,8 +1,21 @@
 <template>
-    <div>
-        <h2>Usuario actu88alww</h2>
-        <h1>{{ listaUsuarios}}</h1>
-        <button @click="agregar">Agregar Usuario</button>
+    <div class="row">
+        
+        <div class="col">
+          <button @click="agregar">Agregar Usuario</button>  
+        </div>
+        <div class="col">
+           codigo<input type="text" v-model="usuario.codigo">
+        </div>
+        <div class="col">
+            descripcion <input type="text" v-model="usuario.desc">
+        </div>
+        <div class="col">
+            <h1>{{ listaUsuarios}}</h1>  
+        </div>
+        
+        
+        
     </div>
 </template>
 <script>
@@ -17,10 +30,15 @@ export default {
         store, listaUsuarios
         };
     },
+    data(){
+        return{
+            usuario: {codigo:0,desc:""}
+        }
+    },
     methods: {
         agregar(){
             
-            this.store.agregarUsuario();
+            this.store.agregarUsuario({...this.usuario});
         }
     }
 };

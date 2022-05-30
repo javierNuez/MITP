@@ -8,8 +8,8 @@ export const useStore = defineStore('main', {
     },
 
     actions:{
-        agregarUsuario(){
-            this.listaUsuarios.push({id:1,desc:"algo"});
+        agregarUsuario(obj){
+            this.listaUsuarios.push(obj);
         },
        
     }, 
