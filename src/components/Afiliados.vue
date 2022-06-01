@@ -17,8 +17,8 @@ export default {
     },
     methods:{
         async traerDatos(){
-            const rta= await (await conectarAfiliados.getAfiliados()).data;
-            console.log(rta);
+            const rta= await conectarAfiliados.getAfiliados();
+            console.log(rta.data);
         }
     }
 }
