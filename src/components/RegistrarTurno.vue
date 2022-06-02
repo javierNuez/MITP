@@ -28,7 +28,6 @@
             type="text"
             class="form-control"
             name="reserva"
-            readonly="readonly"
             style="font-size: 30px"
           />
         </div>
