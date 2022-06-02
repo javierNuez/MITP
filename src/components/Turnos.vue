@@ -1,31 +1,39 @@
 <template>
     <div>
-	    <form style="width:70%;margin:0 auto;"> <!--action="conexion.php" method="POST"-->
-		        <div class="row">
-			        <div class="col-10">
-    		            <h1 id="app" style="color: #4d78a8;">Registro de turnos por <b>fecha</b>:</h1>
-    		        </div>
-    		        <div class="col-2">
-    		            <a href="" class="btn btn-secondary" role="button" aria-pressed="true">Ordenar por Especialidad</a>
-    		        </div>
-		        </div>
-
-		        <!--<div class="page-header bg-primary text-white text-center">
-		        <span class="h3">Salas reservadas</span>-->
-
-	            
-	
-	            <table class="table"  border="1">
-
-		        </table>
-		        <!--
-	            <div>
-		                <a href="" class="btn btn btn btn-info" role="button" aria-pressed="true">Registrar una reserva</a>
-
-		                <a href="" class="btn btn btn btn-info" role="button" aria-pressed="true" style="float: right;">Eliminar reserva</a>
-	            </div>
-                -->
-                
-	    </form>
+        <h3>Turnos</h3>
+        <li v-for="conectarTurnos in listaT" :key="conectarTurnos.id_afiliado">
+         
+        {{conectarTurnos.id_afiliado}} {{conectarTurnos.nombreA}} 
+        {{conectarTurnos.apellidoA}} {{conectarTurnos.dniA}}
+		{{conectarTurnos.nombreM}} {{conectarTurnos.apellidoM}}
+		{{conectarTurnos.especialidadM}}
+		</li>
+        {{mensajeError}}
+        <button @click="traerDatos">Traer datos</button>
     </div>
 </template>
+<script>
+import conectarTurnos, {} from '../services/conectarTurnos.js'
+export default {
+    data() {
+        return {
+            listaT:[],
+            Turno: { id_afiliado: 0, nombreA: '', apellidoA: '', dniA: 0 ,nombreM:'', apellidoM:'', especialidadM:''},
+            mensajeError: ''
+        }
+        
+    },
+    methods:{
+        async traerDatos(){
+            try{
+              const rta= await conectarTurnos.getTurnos();
+            this.listaT = rta.data;  
+            }catch( error){
+                console.log(error);
+                this.mensajeError = "Se produjo un error con la conexión"
+            }
+            
+        }
+    }
+}
+</script>

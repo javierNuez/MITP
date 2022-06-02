@@ -1,13 +1,5 @@
 <template>
   <div style="width:60%;margin:0 auto;">
-    <div class="btn-flotante">
-      <a
-        href=""
-        class="btn btn btn btn-info"
-        role="button"
-        aria-pressed="true"
-      ></a>
-    </div>
 
     <form>
       <!-- action="codigo.php" method="POST" style="width:60%;margin:0 auto;"-->
@@ -49,7 +41,7 @@
           <select type="text" class="form-control" name="sala" required>
             <option value="Clinico">Clinico</option>
             <option value="Dermatologo">Dermatologo</option>
-            <option value="Quinisiologia">Quinisiologia</option>
+            <option value="kinesiologia">Quinisiologia</option>
             <option value="Pediatra">Pediatra</option>
           </select>
         </div>
