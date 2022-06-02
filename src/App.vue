@@ -5,6 +5,7 @@
 <template>
 <div>
   <p>
+    <router-link to="/loguin">Loguin</router-link> |
     <router-link to="/home">Home</router-link> |
     <router-link to="/afiliados">Afiliados</router-link> |
     <router-link to="/turnos">Turnos</router-link> |

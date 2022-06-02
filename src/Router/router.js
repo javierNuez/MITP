@@ -1,4 +1,5 @@
 import { createRouter,createWebHashHistory } from 'vue-router'
+import Loguin from '../components/Loguin.vue'
 import Home from '../components/Home.vue'
 import Afiliados from '../components/Afiliados.vue'
 import Turnos from '../components/Turnos.vue'
@@ -11,6 +12,7 @@ import NotFound from '../components/NotFound.vue'
 
 
 const routes = [
+    { path:'/Loguin', component: Loguin},
     { path:'/Home', component: Home},
     { path:'/afiliados', component: Afiliados},
     { path:'/turnos', component: Turnos},
