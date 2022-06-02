@@ -1,8 +1,6 @@
 <template>
     <div>
 	    <form style="width:70%;margin:0 auto;"> <!--action="conexion.php" method="POST"-->
-
-		
 		        <div class="row">
 			        <div class="col-10">
     		            <h1 id="app" style="color: #4d78a8;">Registro de turnos por <b>fecha</b>:</h1>
