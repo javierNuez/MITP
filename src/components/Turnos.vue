@@ -1,4 +1,5 @@
 <template>
+
     <div style="width:70%;margin:0 auto;">
         <h3>Turnos</h3>
 		<table class="table"  border="1">
@@ -44,6 +45,7 @@ export default {
             Turno: { id_afiliado: 0, nombreA: '', apellidoA: '', dniA: 0 ,nombreM:'', apellidoM:'', especialidadM:'',fecha:'',hora:''},
             mensajeError: ''
         }
+		
         
     },
     methods:{
