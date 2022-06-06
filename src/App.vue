@@ -11,6 +11,7 @@
     <router-link to="/turnos">Turnos</router-link> |
     <router-link to="/usuarioActual">Usuario Actual</router-link> |
     <router-link to="/RegistrarTurno">Registrar Turno</router-link>|
+    <router-link to="/RegistrarAfiliado">Registrar Afiliado</router-link>|
     <router-link to="/EliminarTurno">Eliminar Turno</router-link>
 
   </p>

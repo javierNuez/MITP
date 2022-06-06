@@ -17,45 +17,55 @@
 		</thead>
 		
 		<tbody>
-		<tr v-for="conectarTurnos in listaT" :key="conectarTurnos.id_afiliado">
-		<td>{{conectarTurnos.id_afiliado}}</td>
-		<td>{{conectarTurnos.nombreA}}</td>
-		<td>{{conectarTurnos.apellidoA}}</td>
-		<td>{{conectarTurnos.dniA}}</td>
-		<td>{{conectarTurnos.nombreM}}</td>
-		<td>{{conectarTurnos.apellidoM}}</td>
-		<td>{{conectarTurnos.especialidadM}}</td>
-		<td>{{conectarTurnos.fecha}}</td>
-		<td>{{conectarTurnos.hora}}</td>
+		<tr v-for=" conectarTurnos in lista" :key="conectarTurnos.id_afiliado">
+		<td>{{ conectarTurnos.id_afiliado }}</td>
+		<td>{{ conectarTurnos.nombreA }}</td>
+		<td>{{ conectarTurnos.apellidoA }}</td>
+		<td>{{ conectarTurnos.dniA }}</td>
+		<td>{{ conectarTurnos.nombreM }}</td>
+		<td>{{ conectarTurnos.apellidoM }}</td>
+		<td>{{ conectarTurnos.especialidadM }}</td>
+		<td>{{ conectarTurnos.fecha }}</td>
+		<td>{{ conectarTurnos.hora }}</td>
 		</tr>
 		</tbody>
 		</table>         
         {{mensajeError}}
-        <button @click="traerDatos">Traer datos</button>
+        
+        
+        <button class="btn btn-info" @click="$router.push('/RegistrarTurno')">Alta de turno</button>
+              
     </div>
+  
 </template>
 <script>
-import conectarTurnos, {} from '../services/conectarTurnos.js'
+import conectarTurnos from '../services/conectarTurnos.js'
+
+
 export default {
+
+    
     data() {
-        return {
-            listaT:[],
-            Turno: { id_afiliado: 0, nombreA: '', apellidoA: '', dniA: 0 ,nombreM:'', apellidoM:'', especialidadM:'',fecha:'',hora:''},
+        return {       
+        lista:[],
+            Turnos: 
+            { id_afiliado: 0, nombreA: '', apellidoA: '', dniA: 0 ,nombreM:'',
+             apellidoM:'', especialidadM:'',fecha:'',hora:''},
             mensajeError: ''
         }
         
     },
-    methods:{
-        async traerDatos(){
-            try{
-              const rta= await conectarTurnos.getTurnos();
-            this.listaT = rta.data;  
-            }catch( error){
-                console.log(error);
-                this.mensajeError = "Se produjo un error con la conexión"
-            }
-            
+    created: async function(){
+        try{
+            const rta = await conectarTurnos.getTurnos();
+            this.lista = rta.data;
+        } catch( error ){
+            console.log (error);
+            this.mensajeError = 'Se produjo un error en la conexion'
         }
+    },
+    methods:{
+
     }
 }
 </script>
