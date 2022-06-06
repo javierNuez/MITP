@@ -6,6 +6,7 @@ import Turnos from '../components/Turnos.vue'
 import Usuario from '../components/Usuario.vue'
 import UsuarioActual from '../components/UsuarioActual.vue'
 import RegistrarTurno from '../components/registrarTurno.vue'
+import RegistrarAfiliado from '../components/registrarAfiliado.vue'
 import EliminarTurno from '../components/EliminarTurno.vue'
 import NotFound from '../components/NotFound.vue'
 
@@ -19,6 +20,7 @@ const routes = [
     { path:'/usuario/:id', component: Usuario},
     { path:'/UsuarioActual', component: UsuarioActual},
     { path:'/registrarTurno', component: RegistrarTurno},
+    { path:'/registrarAfiliado', component: RegistrarAfiliado},
     { path:'/EliminarTurno', component: EliminarTurno},
     { path:'/:pathMatch(.*)*', name: 'NotFound', component: NotFound},
     

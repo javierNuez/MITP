@@ -11,5 +11,11 @@ const apiAfiliados = axios.create({
 export default{
     getAfiliados(){
         return apiAfiliados.get('/api/getlistaAfiliados')
+    },
+    addAfiliados(conectarAfiliados){
+        return apiAfiliados.post('api/setafiliados', conectarAfiliados)
+    },
+    deleteAfiliados(id_afiliado){
+        return apiAfiliados.delete('api/borrarAfiliado/'+ id_afiliado)
     }
 }

@@ -14,36 +14,18 @@
 
       <fieldset>
         <div class="form-group">
-          <label for="reserva">Turno nº:</label>
+          <label for="Afiliado">Afiliado nº:</label>
           <input
-            id="numRamdom"
             type="text"
             class="form-control"
-            name="reserva"
+            name="Afiliado"
             style="font-size: 30px"
           />
         </div>
 
         <div class="form-group">
-          <label for="mail">Su mail:</label>
-          <input type="text" class="form-control" name="mail" required />
-        </div>
-        <div class="form-group">
-          <label for="nombre">Nombre:</label>
-          <input type="text" class="form-control" name="nombre" required />
-        </div>
-        <div class="form-group">
-          <label for="apellido">Apellido:</label>
-          <input type="text" class="form-control" name="apellido" required />
-        </div>
-        <div class="form-group">
-          <label for="sala">Especialidades:</label>
-          <select type="text" class="form-control" name="sala" required>
-            <option value="Clinico">Clinico</option>
-            <option value="Dermatologo">Dermatologo</option>
-            <option value="kinesiologia">Quinisiologia</option>
-            <option value="Pediatra">Pediatra</option>
-          </select>
+          <label for="mail">Médico Dni/Matricula:</label>
+          <input type="text" class="form-control" name="matricula" required />
         </div>
         <div class="form-group">
           <label for="fecha">Fecha del turno:</label>
@@ -163,12 +145,6 @@
             <option value="1900">19:00</option>
           </select>
         </div>
-        <div></div>
-
-        <div>
-          <label for="detalle">Descripción:</label>
-          <textarea class="form-control" name="detalle"></textarea>
-        </div>
         <div class="form-group">
           <input
             type="submit"
@@ -179,14 +155,7 @@
         </div>
       </fieldset>
       <div>
-        <a
-          href=""
-          class="btn btn btn btn-info"
-          role="button"
-          aria-pressed="true"
-          style="float: left"
-          >Ver Turnos</a
-        >
+        <button class="btn btn-info" @click="$router.push('/Turnos')">Ver Turno</button>
 
         <a
           href=""
