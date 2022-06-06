@@ -33,6 +33,7 @@
         {{mensajeError}}
         <button @click="traerDatos">Traer datos</button>
     </div>
+	
 </template>
 <script>
 import conectarTurnos, {} from '../services/conectarTurnos.js'
