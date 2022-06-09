@@ -1,4 +1,5 @@
 <template>
+
     <div style="width:70%;margin:0 auto;">
         <h3>Turnos</h3>
 		<table class="table"  border="1">
@@ -36,7 +37,7 @@
         <button class="btn btn-info" @click="$router.push('/RegistrarTurno')">Alta de turno</button>
               
     </div>
-  
+	
 </template>
 <script>
 import conectarTurnos from '../services/conectarTurnos.js'
@@ -53,6 +54,7 @@ export default {
              apellidoM:'', especialidadM:'',fecha:'',hora:''},
             mensajeError: ''
         }
+		
         
     },
     created: async function(){
