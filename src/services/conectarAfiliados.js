@@ -13,7 +13,7 @@ export default{
         return apiAfiliados.get('/api/getlistaAfiliados')
     },
     addAfiliados(conectarAfiliados){
-        return apiAfiliados.post('api/setafiliados', conectarAfiliados)
+        return apiAfiliados.post('api/addAfiliados', conectarAfiliados)
     },
     deleteAfiliados(id_afiliado){
         return apiAfiliados.delete('api/borrarAfiliado/'+ id_afiliado)

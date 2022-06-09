@@ -123,10 +123,11 @@ export default {
   methods: {
     async agregarAfiliado() {
       const obj = { ...this.conectarAfiliados };
+      console.log(obj);
       this.lista.push(obj);
       try{
           const rta = await conectarAfiliados.addAfiliados(obj);
-          this.lista = rta.data;
+          //this.lista = rta.data;
       } catch(error){
           console.log(error);
           this.mensajeError = 'Se produjo un error en la conexion'
