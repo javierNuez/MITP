@@ -25,7 +25,7 @@
             <!--<button class="btn btn-info" @click="">Editar</button> |-->
             <button
               type="button"
-              v-on:click="borrarAfiliado(conectarAfiliados.id_afiliado)"
+              v-on:click="deleteAfiliados(conectarAfiliados.id_afiliado)"
               class="btn btn-danger"
             >
               Borrar
@@ -133,7 +133,7 @@ export default {
           this.mensajeError = 'Se produjo un error en la conexion'
       }
     },
-    async borrarAfiliado(id_afiliado) {
+    async deleteAfiliados(id_afiliado) {
       try {        
         const rta = await conectarAfiliados.deleteAfiliados(id_afiliado);
         
