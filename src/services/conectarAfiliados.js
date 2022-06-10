@@ -16,6 +16,6 @@ export default{
         return apiAfiliados.post('api/addAfiliados', conectarAfiliados)
     },
     deleteAfiliados(id_afiliado){
-        return apiAfiliados.delete('api/deleteAfiliados/'+ id_afiliado)
+        return apiAfiliados.delete('/api/deleteAfiliados/'+ id_afiliado)
     }
 }
