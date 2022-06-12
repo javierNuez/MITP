@@ -95,6 +95,7 @@
             Enviar Afiliado
           </button>
         </div>
+        
       </form>
     </div>
     {{ mensajeError }}
@@ -123,22 +124,28 @@ export default {
   methods: {
     async agregarAfiliado() {
       const obj = { ...this.conectarAfiliados };
-      console.log(obj);
       this.lista.push(obj);
       try{
           const rta = await conectarAfiliados.addAfiliados(obj);
-          //this.lista = rta.data;
+          this.lista = rta.data;
       } catch(error){
           console.log(error);
           this.mensajeError = 'Se produjo un error en la conexion'
       }
     },
+<<<<<<< HEAD
     async deleteAfiliados(id_afiliado) {
       console.log(id_afiliado);
       try {        
         const rta = await conectarAfiliados.deleteAfiliados(id_afiliado);
         
         
+=======
+    deleteAfiliados(id_afiliado) {
+      try {        
+        //const rta = await conectarAfiliados.deleteAfiliados(id_afiliado);
+        //console.log(id_afiliado);
+>>>>>>> 1aff5aa1b2455be804b4a3bfafc7a46e0290f4a3
         const listaIdAfiliado = this.lista.map(e => {return e.id_afiliado} )
         
         const indice = listaIdAfiliado.indexOf(id_afiliado);
