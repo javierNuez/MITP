@@ -1,6 +1,6 @@
 <template>
     <div>
         Usuario
-        {{ $route.params.id }}
+        {{ $route.params.id_afiliado }}
     </div>
 </template>

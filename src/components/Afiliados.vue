@@ -102,7 +102,7 @@
   </div>
 </template>
 <script>
-import conectarAfiliados from "../services/conectarAfiliados.js";
+import conectarAfiliados from "../services/conectarAfiliados.js"
 export default {
   data() {
     return {
@@ -133,19 +133,13 @@ export default {
           this.mensajeError = 'Se produjo un error en la conexion'
       }
     },
-<<<<<<< HEAD
-    async deleteAfiliados(id_afiliado) {
+    /*async*/ deleteAfiliados(id_afiliado) {
       console.log(id_afiliado);
       try {        
-        const rta = await conectarAfiliados.deleteAfiliados(id_afiliado);
+        const rta = /*await*/ conectarAfiliados.deleteAfiliados(id_afiliado);
+        console.log(rta);
         
         
-=======
-    deleteAfiliados(id_afiliado) {
-      try {        
-        //const rta = await conectarAfiliados.deleteAfiliados(id_afiliado);
-        //console.log(id_afiliado);
->>>>>>> 1aff5aa1b2455be804b4a3bfafc7a46e0290f4a3
         const listaIdAfiliado = this.lista.map(e => {return e.id_afiliado} )
         
         const indice = listaIdAfiliado.indexOf(id_afiliado);
