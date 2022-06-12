@@ -134,10 +134,11 @@ export default {
       }
     },
     async deleteAfiliados(id_afiliado) {
+      console.log(id_afiliado);
       try {        
         const rta = await conectarAfiliados.deleteAfiliados(id_afiliado);
         
-        console.log(id_afiliado);
+        
         const listaIdAfiliado = this.lista.map(e => {return e.id_afiliado} )
         
         const indice = listaIdAfiliado.indexOf(id_afiliado);
