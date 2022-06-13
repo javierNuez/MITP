@@ -77,6 +77,16 @@
               v-model="conectarMedicos.apellidoM"
             />
           </div>
+          <div class="form-group">
+            <label for="apellidoM">Especialidad:</label>
+            <input
+              type="text"
+              class="form-control"
+             
+              required
+              v-model="conectarMedicos.especialidad"
+            />
+          </div>
         </fieldset>
         <div>
           <button
@@ -97,7 +107,7 @@ export default {
     return {
       lista: [],
       
-      conectarMedicos: { id_matricula: 0, nombreM: "", apellidoM: "", Especialidad: "" },
+      conectarMedicos: { id_matricula: 0, nombreM: "", apellidoM: "", especialidad: "" },
       mensajeError: "",
     };
   },

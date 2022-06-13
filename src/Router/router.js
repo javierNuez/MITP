@@ -2,6 +2,7 @@ import { createRouter,createWebHashHistory } from 'vue-router'
 import Loguin from '../components/Loguin.vue'
 import Home from '../components/Home.vue'
 import Afiliados from '../components/Afiliados.vue'
+import Medicos from '../components/Medicos.vue'
 import Turnos from '../components/Turnos.vue'
 import Usuario from '../components/Usuario.vue'
 import UsuarioActual from '../components/UsuarioActual.vue'
@@ -16,6 +17,7 @@ const routes = [
     { path:'/Loguin', component: Loguin},
     { path:'/Home', component: Home},
     { path:'/afiliados', component: Afiliados},
+    { path:'/medicos', component: Medicos},
     { path:'/turnos', component: Turnos},
     { path:'/usuario/:id', component: Usuario},
     { path:'/UsuarioActual', component: UsuarioActual},
