@@ -25,7 +25,7 @@
             <!--<button class="btn btn-info" @click="">Editar</button> |-->
             <button
               type="button"
-              v-on:click="borrarAfiliado(conectarMedicos.id_matricula)"
+              v-on:click="borrarMedico(conectarMedicos.id_matricula)"
               class="btn btn-danger"
             >
               Borrar
@@ -135,7 +135,7 @@ export default {
     async borrarMedico(id_matricula) {
       try {        
         const rta = await conectarMedicos.deleteMedicos(id_matricula);
-        
+        console.log(rta);
         console.log(id_matricula);
         const listaIdMedico = this.lista.map(e => {return e.id_matricula} )
         
